@@ -22,9 +22,9 @@ const BookingCards = () => {
   }, [bookingInfo]);
   // console.log(bookingInfo);
 
-  if (!bookingInfo && !bookingInfo.length) {
-    return <div className='text-center'>Loading</div>;
-  }
+  // if (bookingInfo.length == 0) {
+  //   return <div className='text-center'>no previous booking found</div>;
+  // }
 
   return (
     <div>
@@ -34,29 +34,33 @@ const BookingCards = () => {
           Total Bookings : {bookingInfo.length}
         </p>
       </div>
-      {bookingInfo.map((info, index) => (
-        <div className='mb-4' key={index}>
-          <div className='border-2 rounded-2xl p-4 mb-7 bg-white'>
-            <h4>Last Booking Details</h4>
-            <p className='font-bold mb-1'>Seats:</p>
-            {Object.entries(info.seats).map(([seat, count]) => (
-              <p key={seat} className='mb-1'>
-                <span className='font-bold'>{seat}: </span>
-                {count}
-              </p>
-            ))}
+      {bookingInfo.length == 0 ? (
+        <div className='text-center'>no previous booking found</div>
+      ) : (
+        bookingInfo.map((info, index) => (
+          <div className='mb-4' key={index}>
+            <div className='border-2 rounded-2xl p-4 mb-7 bg-white'>
+              <h4>Last Booking Details</h4>
+              <p className='font-bold mb-1'>Seats:</p>
+              {Object.entries(info.seats).map(([seat, count]) => (
+                <p key={seat} className='mb-1'>
+                  <span className='font-bold'>{seat}: </span>
+                  {count}
+                </p>
+              ))}
 
-            <p className=' mb-1'>
-              <span className='font-bold'>Slot: </span>
-              {info.slot}
-            </p>
-            <p className=' mb-1'>
-              <span className='font-bold'>Movie: </span>
-              {info.movie}
-            </p>
+              <p className=' mb-1'>
+                <span className='font-bold'>Slot: </span>
+                {info.slot}
+              </p>
+              <p className=' mb-1'>
+                <span className='font-bold'>Movie: </span>
+                {info.movie}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      )}
     </div>
   );
 };
