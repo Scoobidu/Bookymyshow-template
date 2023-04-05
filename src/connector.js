@@ -1,6 +1,7 @@
 const mongodb = require("mongodb");
+require("dotenv").config();
 
-const mongoURI = `mongodb+srv://Bobby:Sahi1Atlas@cluster0.rx7qkbf.mongodb.net/?retryWrites=true&w=majority`;
+const mongoURI = process.env.DATABASE;
 
 let mongoose = require("mongoose");
 // mongoose.set("strictQuery", false);
