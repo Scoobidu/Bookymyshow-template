@@ -10,7 +10,7 @@ it has 4 components
   
 We are taking the` movie`, `slots` and `seats type` from data.js and mapping it  and then we are rendering it in  `RenderMovies`, `RenderSlots`, `RenderSeats`.
 
-If we select a movie, active class is applied to that movie and it gets selected, it get store in a movie variable. its same for slots, it gets store in slot variable. For seats we are initializing an object with seats type as a key initially having values zero. If we select seats that looks for that seat type `key` and updates its value.
+If we select a movie, active class is applied to that movie and it gets selected, it get store in a movie variable. its same for slots, it gets store in slot variable. For seats we are initializing an object with seats type as a key initially having values zero. If we select seats that looks for that seat type `key` and updates its `value`.
 
 if there are no bookings to dislay it displays total bookings zero and no previous bookings.
 ![bms1](https://user-images.githubusercontent.com/102259781/230596170-db1f534d-7c04-4b0c-aa4c-9d7e34ff1b25.PNG)
