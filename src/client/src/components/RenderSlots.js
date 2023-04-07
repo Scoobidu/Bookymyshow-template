@@ -2,6 +2,7 @@ import React from "react";
 import { slotsData } from "./data";
 
 function RenderSlots({ slot, setSlot, activeSlot, setActiveSlot }) {
+  //---------- mapping slots -----------
   const renderSlot = (data) =>
     data.map((slotData, index) => (
       <div
@@ -21,6 +22,8 @@ function RenderSlots({ slot, setSlot, activeSlot, setActiveSlot }) {
     ));
   return (
     <>
+      {/*-------- rendering slots ---------*/}
+
       <div className='border-2 rounded-2xl p-3 mt-3'>
         <h4>Select a Time slot</h4>
         <div className='mt-2'>{renderSlot(slotsData)}</div>

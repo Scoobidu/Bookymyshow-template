@@ -4,9 +4,9 @@ require("dotenv").config();
 const mongoURI = process.env.DATABASE;
 
 let mongoose = require("mongoose");
-// mongoose.set("strictQuery", false);
 const { bookMovieSchema } = require("./schema");
 
+//------ connecting to monoDB --------
 const connect = async () => {
   await mongoose
     .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })

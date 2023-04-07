@@ -13,7 +13,6 @@ import BookingData from "../components/BookingData";
 const App = () => {
   const [movie, setMovie] = useState("");
   const [slot, setSlot] = useState("");
-  // const initialSeats = new Array(seatsData.length).fill(0);
   const initialSeats = {};
   seatsData.forEach((seat) => {
     initialSeats[seat] = 0;
@@ -22,12 +21,6 @@ const App = () => {
   const [activeMovie, setActiveMovie] = useState("");
   const [activeSlot, setActiveSlot] = useState("");
   const [active, setActive] = useState(false);
-
-  // useEffect(() => {
-  //   console.log("initialseats", initialSeats);
-  //   console.log("seat", seat);
-  // console.log(active);
-  // });
 
   const notify = (val) => {
     toast.success(val, {
@@ -56,13 +49,13 @@ const App = () => {
 
   const addBooking = async (e) => {
     e.preventDefault();
-    // console.log(seat);
 
     if (movie !== "" && slot !== "" && active) {
       console.log(movie);
       console.log(slot);
       console.log(seat);
 
+      //------- posting data in backend ----------
       await fetch(`https://bmsbackend.onrender.com/api/booking`, {
         method: "post",
         body: JSON.stringify({
@@ -94,12 +87,14 @@ const App = () => {
           <form className='py-16 pl-5 pr-3'>
             <h3 className=''>Book that show!!</h3>
 
+            {/*--------- movies ----------*/}
             <RenderMovies
               movie={movie}
               setMovie={setMovie}
               activeMovie={activeMovie}
               setActiveMovie={setActiveMovie}
             />
+            {/*--------- slots ----------*/}
             <RenderSlots
               slot={slot}
               setSlot={setSlot}
@@ -107,6 +102,7 @@ const App = () => {
               setActiveSlot={setActiveSlot}
             />
 
+            {/*--------- seats ----------*/}
             <RenderSeats seat={seat} setSeat={setSeat} setActive={setActive} />
 
             <button
