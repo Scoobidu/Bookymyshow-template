@@ -7,7 +7,7 @@ const BookingCards = () => {
   useEffect(() => {
     const fetchData = async () => {
       return (
-        fetch("/api/all-bookings")
+        fetch("https://bmsbackend.onrender.com/api/all-bookings")
           // ✅ call response.json() here
           .then((response) => response.json())
           .then((data) => {
@@ -19,8 +19,8 @@ const BookingCards = () => {
       );
     };
     fetchData();
-  }, [bookingInfo]);
-  // console.log(bookingInfo);
+    // console.log(bookingInfo);
+  });
 
   // if (bookingInfo.length == 0) {
   //   return <div className='text-center'>no previous booking found</div>;

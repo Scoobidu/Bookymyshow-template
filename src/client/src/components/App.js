@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../styles/App.css";
 // import "../styles/selectCSS";
 import "../styles/bootstrap.min.css";
@@ -24,6 +26,31 @@ const App = () => {
   // console.log(active);
   // });
 
+  const notify = (val) => {
+    toast.success(val, {
+      position: "top-center",
+      autoClose: 500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+  const notifyerr = (val) => {
+    toast.error(val, {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
   const addBooking = async (e) => {
     e.preventDefault();
     // console.log(seat);
@@ -33,7 +60,7 @@ const App = () => {
       console.log(slot);
       console.log(seat);
 
-      await fetch(`/api/booking`, {
+      await fetch(`https://bmsbackend.onrender.com/api/booking`, {
         method: "post",
         body: JSON.stringify({
           movie: movie,
@@ -44,6 +71,7 @@ const App = () => {
           "Content-Type": "application/json",
         },
       });
+      notify("Booked Successfully");
 
       setMovie("");
       setActiveMovie("");
@@ -52,7 +80,7 @@ const App = () => {
       setSeat(initialSeats);
       setActive(false);
     } else {
-      alert("SomeThings missing");
+      notifyerr("Missing Something");
     }
   };
 
@@ -155,6 +183,7 @@ const App = () => {
         <div className='w-2/5 py-16 pl-3 pr-5'>
           <BookingCards />
         </div>
+        <ToastContainer />
       </div>
     </>
   );
