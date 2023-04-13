@@ -17,6 +17,7 @@ const connect = async () => {
       console.log("error while connection", err);
     });
 };
+
 const Book = mongoose.model("Book", bookMovieSchema);
 
 exports.Book = Book;

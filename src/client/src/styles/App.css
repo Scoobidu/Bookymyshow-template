@@ -8,6 +8,10 @@
   background-color: rgba(44, 108, 224, 1);
 }
 
+.invisi {
+  visibility: hidden;
+}
+
 .movie-column,
 .seat-column,
 .slot-column {
