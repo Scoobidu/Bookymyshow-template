@@ -33,6 +33,10 @@ Description: Returns a list of all booking details. <br />
 Request Parameters:None <br />
 Response:The response will be a JSON array containing a list of all bookings. Each booing details will contain the movie name, slot and seats data. <br />
 
-
+## Movie Booking API
+Endpoint: [https://bmsbackend.onrender.com/api/booking](https://bmsbackend.onrender.com/api/booking) <br />
+Method: POST <br />
+Request Parameters:The request body should contain the following parameters: <br />
+Response:The response will be a JSON array containing a list of all bookings. Each booing details will contain the movie name, slot and seats data. <br />
 
 
