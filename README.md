@@ -17,8 +17,10 @@ If there are no previous bookings to display, the system shows a message indicat
 ![bms1](https://user-images.githubusercontent.com/102259781/230596170-db1f534d-7c04-4b0c-aa4c-9d7e34ff1b25.PNG)
 
 If a user tries to book a movie without selecting all the required options, the system displays a notification indicating the specific warning.
+
 ![errrrr](https://user-images.githubusercontent.com/102259781/232031803-63958d99-3188-49b1-b559-c1bc0634cf89.PNG)
  
 When a user selects a movie, time slot, and seats and clicks the `"Book Now"` button, the system sends the booking data to the`backend`. The system then renders the booking data in a component called `BookingData` and `resets` all the selection variables for future bookings.
+
 ![bms4](https://user-images.githubusercontent.com/102259781/230596855-b5c74a63-3c42-4793-952e-3a1539f0ac4a.PNG)
 
