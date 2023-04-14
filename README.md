@@ -38,12 +38,10 @@ Endpoint: [https://bmsbackend.onrender.com/api/booking](https://bmsbackend.onren
 Method: POST <br />
 Request Parameters:The request body should contain the following parameters: <br />
 
-## Request Parameters
-
 | Parameter | Type   | Required | Description                             |
 |-----------|--------|----------|-----------------------------------------|
-| movie     | string | Yes      | The name of the movie being booked.      |
-| slot      | string | Yes      | The date and time of the movie show.     |
+| movie     | string | Yes      | The name of the movie being booked.     |
+| slot      | string | Yes      | The  time of the movie show.            |
 | seats     | array  | Yes      | An array of seat numbers being booked.  |
 
 
