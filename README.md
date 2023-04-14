@@ -24,9 +24,9 @@ When a user selects a movie, time slot, and seats and clicks the `"Book Now"` bu
 
 ![bms4](https://user-images.githubusercontent.com/102259781/230596855-b5c74a63-3c42-4793-952e-3a1539f0ac4a.PNG)
 
-## Api
+# Api
 
-To retrieve all movie details from an API, you are using an HTTP GET request. <br />
+## All movie Bookings API
 Endpoint: [https://bmsbackend.onrender.com/api/all-bookings](https://bmsbackend.onrender.com/api/all-bookings) <br />
 Method: GET<br />
 Description: Returns a list of all booking details. <br />
