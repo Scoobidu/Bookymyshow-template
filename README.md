@@ -37,7 +37,6 @@ Response:The response will be a JSON array containing a list of all bookings. Ea
 Endpoint: [https://bmsbackend.onrender.com/api/booking](https://bmsbackend.onrender.com/api/booking) <br />
 Method: POST <br />
 Request Parameters:The request body should contain the following parameters: <br />
-
 | Parameter | Type   | Required | Description                             |
 |-----------|--------|----------|-----------------------------------------|
 | movie     | string | Yes      | The name of the movie being booked.     |
