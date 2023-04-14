@@ -27,23 +27,20 @@ When a user selects a movie, time slot, and seats and clicks the `"Book Now"` bu
 # Api
 
 ## All movie Bookings API
-Endpoint: [https://bmsbackend.onrender.com/api/all-bookings](https://bmsbackend.onrender.com/api/all-bookings) <br />
-Method: GET<br />
-Description: Returns a list of all booking details. <br />
-Request Parameters:None <br />
-Response:The response will be a JSON array containing a list of all bookings. Each booing details will contain the movie name, slot and seats data. <br />
+Endpoint : [https://bmsbackend.onrender.com/api/all-bookings](https://bmsbackend.onrender.com/api/all-bookings) <br />
+Method : GET<br />
+Description : Returns a list of all booking details. <br />
+Request Parameters : None <br />
+Response :The response will be a JSON array containing a list of all bookings. Each booing details will contain the movie name, slot and seats data. <br />
 
 ## Movie Booking API
-Endpoint: [https://bmsbackend.onrender.com/api/booking](https://bmsbackend.onrender.com/api/booking) <br />
-Method: POST <br />
-Request Parameters:The request body should contain the following parameters: <br />
+Endpoint : [https://bmsbackend.onrender.com/api/booking](https://bmsbackend.onrender.com/api/booking) <br />
+Method : POST <br />
+Request Parameters : The request body should contain the following parameters: <br />
 | Parameter | Type   | Required | Description                             |
 |-----------|--------|----------|-----------------------------------------|
 | movie     | string | Yes      | The name of the movie being booked.     |
 | slot      | string | Yes      | The  time of the movie show.            |
 | seats     | array  | Yes      | An array of seat numbers being booked.  |
-
-
-Response:The response will be a JSON array containing a list of all bookings. Each booing details will contain the movie name, slot and seats data. <br />
 
 
