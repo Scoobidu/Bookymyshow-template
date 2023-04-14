@@ -3,7 +3,7 @@
 It is a movie booking web application. It is a single page web application. we can select from different movies, different time slots and different seats.
 
 it has 4 components 
-  1. `RenderMovies`
+  1. `RenderMovies`Cancel changes
   2. `RenderSlots`
   3. `RenderSeats`
   4. `BookingDetails`
@@ -26,7 +26,7 @@ When a user selects a movie, time slot, and seats and clicks the `"Book Now"` bu
 
 ## Api
 
-To retrieve all movie details from an API, you are using an HTTP GET request
+To retrieve all movie details from an API, you are using an HTTP GET request.
 Endpoint: [https://bmsbackend.onrender.com/api/all-bookings](https://bmsbackend.onrender.com/api/all-bookings)
 Method: GET
 Description: Returns a list of all booking details.
