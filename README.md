@@ -1,9 +1,9 @@
 # Book my show
 
-It is a movie booking web application. It is a single page web application. we can select from different movies, different time slots and different seats.
+It is a movie booking web application. It is a single page web application. we can select from different movies, different time slots and different seats. It is completely responsive.
 
 it has 4 components 
-  1. `RenderMovies`Cancel changes
+  1. `RenderMovies`
   2. `RenderSlots`
   3. `RenderSeats`
   4. `BookingDetails`
