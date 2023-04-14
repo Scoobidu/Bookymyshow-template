@@ -28,14 +28,10 @@ When a user selects a movie, time slot, and seats and clicks the `"Book Now"` bu
 
 To retrieve all movie details from an API, you are using an HTTP GET request.
 
-Endpoint: [https://bmsbackend.onrender.com/api/all-bookings](https://bmsbackend.onrender.com/api/all-bookings)
-
+Endpoint: [https://bmsbackend.onrender.com/api/all-bookings](https://bmsbackend.onrender.com/api/all-bookings)=
 Method: GET
-
 Description: Returns a list of all booking details.
-
 Request Parameters:None
-
 Response:The response will be a JSON array containing a list of all bookings. Each booing details will contain the movie name, slot and seats data.
 
 
